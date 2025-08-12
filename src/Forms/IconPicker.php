@@ -3,6 +3,7 @@
 namespace Guava\FilamentIconPicker\Forms;
 
 
+use BadMethodCallException;
 use BladeUI\Icons\Factory as IconFactory;
 use Closure;
 use Filament\Forms\Components\Select;
@@ -202,15 +203,15 @@ class IconPicker extends Select
 
      /**
      * Marks the calling method as not allowed (whether because it's not supported or because it's meaningless when using this field)
-     * @throws \BadMethodCallException Always
+     * @throws BadMethodCallException Always
      */
     protected function markAsNotAllowed(string $reason = 'Method not allowed.'): void {
-        throw new \BadMethodCallException($reason);
+        throw new BadMethodCallException($reason);
     }
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function relationship(string|Closure|null $name = null, string|Closure|null $titleAttribute = null, ?Closure $modifyQueryUsing = null, bool $ignoreRecord = false): static
     {
@@ -219,7 +220,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function options(Arrayable|Closure|array|string|null $options): static
     {
@@ -228,7 +229,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function allowHtml(bool|Closure $condition = true): static
     {
@@ -237,7 +238,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function searchable(bool|array|Closure $condition = true): static
     {
@@ -246,7 +247,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function getSearchResultsUsing(?Closure $callback): static
     {
@@ -255,7 +256,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function getOptionLabelFromRecordUsing(?Closure $callback): static
     {
@@ -264,7 +265,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function createOptionUsing(?Closure $callback): static
     {
@@ -273,7 +274,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function createOptionAction(?Closure $callback): static
     {
@@ -282,7 +283,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function createOptionForm(array|Closure|null $schema): static
     {
@@ -291,7 +292,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function schema(array|Closure $components): static
     {
@@ -300,7 +301,7 @@ class IconPicker extends Select
 
     /**
      * @deprecated Method inherited from `\Filament\Forms\Components\Select` but not supported (or meaningless) when using this field
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function multiple(bool|Closure $condition = true): static
     {
